@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<title>Note Nexus</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#A020F0">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="css/Team.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="css/gif.css">
+<!--===============================================================================================-->
+<!-- <link rel="stylesheet" type="text/css" href="slide.css"> -->
+<!--===============================================================================================-->
+<style>
+.slideshow-container {
+  position: relative;
+  width: auto;
+  margin-left: 17%;
+  margin-right: 17%;
+  margin-top: 0%;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+.slide {
+  display: none;
+  border-radius: 2%;
+  border: 4px solid rgb(16, 222, 245);
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Prevent background image repetition */
+}
+.prev, .next {
+  margin-left: 5px;
+  margin-right: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffffff;
+  background-color: rgba(28, 210, 8, 0.477);
+}
+.prev:hover{
+  border: 2px solid orange;
+}
+.next:hover{
+  border: 2px solid orange;
+}
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+.blue {
+    background: #347fd0;
+}
+
+.news {
+    box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4), 0 5px 10px rgba(0,0,0,0.5);
+       width: 890px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 1px;
+    -webkit-user-select: none;
+}
+
+.news span {
+    float: left;
+    color: #fff;
+    padding: 9px;
+    position: relative;
+    top: 1%;
+    box-shadow: inset 0 -15px 30px rgba(0,0,0,0.4);
+    font: 16px 'Raleway', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+
+.text1{
+
+	box-shadow:none !important;
+    width: 750px;
+}
+	@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i');
+html,body{
+  margin:0;
+  height:120%;
+  font-family: 'Josefin Sans', sans-serif;
+
+}
+a{
+  text-decoration:none
+}
+.header{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height:50vw;
+  min-height:400px;
+  max-height:550px;
+  min-width:300px;
+  color:#eee;
+}
+.header:after{
+  content:"";
+  width:100%;
+  height:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  z-index:-1;
+ background: linear-gradient(to bottom, rgba(0,0,0,0.12) 40%,rgba(27,32,48,1) 100%);
+}
+.header:before{
+  content:"";
+  width:100%;
+  height:200%;
+  position:absolute;
+  top:0;
+  left:0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateZ(0); backface-visibility: hidden;
+	scale (1.0, 1.0);
+    transform: translateZ(0);
+  background:#1B2030 url(images/prayas.jpg) 50% 0 no-repeat;
+  background-size:100%;
+  background-attachment:fixed;
+  animation: grow 400s  linear 10ms infinite;
+  transition:all 0.7s ease-in-out;
+  z-index:-2
+}
+.header a{
+  color:#eee
+}
+.menu{
+  display:block;
+  width:40px;
+  height:30px;
+  border:2px solid #fff;
+  border-radius:3px;
+  position:absolute;
+  right:20px;
+  top:20px;
+  text-decoration:none
+}
+.menu:after{
+  content:"";
+  display:block;
+  width:20px;
+  height:3px;
+  background:#fff;
+  position:absolute;
+  margin:0 auto;
+  top:5px;
+  left:0;
+  right:0;
+  box-shadow:0 8px, 0 16px
+}
+.logo{
+  margin-left: 0px;
+  border:2px solid #fff;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  align-content:center;
+  margin:20px;
+  padding:0px 10px;
+  font-weight:900;
+  font: size 0.9em;;
+  line-height:1;
+  box-sizing:border-box;
+  height:40px
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #120911; /* Change this to your preferred background color */
+    color: #fff; /* Change this to your preferred text color */
+    padding: 10px;
+    z-index: 100; /* To ensure the navbar appears above other content */
+    border-bottom: 0.5px solid #f7f6f6;
+}
+
+.navbar{
+  margin-left: 0px;
+  width: 100%;
+  height: 90px; 
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.superlogo{
+  width: 190px;
+  height: 65px;
+  margin-left: 0px;
+  background-image: url('images/superlogo.jpeg');
+  padding: 3px;
+  background-size: cover;
+  background-position: center;
+}
+.sides2{
+  margin-right: 0px;
+}
+.info{
+  width:100%;
+  padding:15% 10% 0 10%;
+  text-align:center;
+  text-shadow:0 2px 3px rgba(0,0,0,0.2)
+}
+.author{
+  display:inline-block;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:url(../../i.imgur.com/6DLCsZcb.jpg) center no-repeat;
+  background-size:cover;
+  box-shadow:0 2px 3px rgba(0,0,0,0.3);
+  margin-bottom:3px;
+}
+.info h4, .meta{
+  font-size:0.7em
+}
+.meta{
+  font-style:italic;
+}
+@keyframes grow{
+  0% { transform: scale(1) translateY(0px)}
+  50% { transform: scale(1.2) translateY(-400px)}
+}
+.content{  
+  padding:5% 10%;
+  text-align:justify
+}
+.btn{
+  color:#333;
+  border:2px solid;
+  border-radius:3px;
+  text-decoration:none;
+  display:inline-block;
+  padding:5px 10px;
+  font-weight:600
+}
+.twtr{
+  margin-top:100px
+}.btn.twtr:after{content:"\1F426";padding-left:5px}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f5;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.page-title {
+    font-size: 38px;
+    margin: 20px 0;
+    color: #f10f0f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.counter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter-container {
+  display: flex;
+  justify-content: center;
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    width: 120px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        background-color: #007BFF;
+    }
+    to {
+        transform: scale(1.05);
+        background-color: #f3f8f6;
+    }
+}
+
+#visitor-count {
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+.animated-text {
+    animation: color-change 1s infinite alternate;
+}
+
+@keyframes color-change {
+    from {
+        color: #fff;
+    }
+    to {
+        color: #0a0a0a;
+    }
+}
+footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Style for the copyright symbol */
+        .copyright-symbol {
+            font-size: 18px;
+            margin-right: 5px;
+        }       
+</style>
+
+</head>
+<body>
+	<div class="header">
+		<nav class="navbar">
+        <div class="superlogo"></div>
+      <div><a href="" class="logo">HOME</a></div>
+		  <div><a href="https://scholarshipportal.mp.nic.in/Index.aspx" target="_blank" class="logo">State Scholarship Portal</a></div>
+      <div><a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZMIJgu_kJOuGitePH__03dl3HLUvsCnA4WaMlmR3of3kHjg/formResponse" target="_blank" class="logo">Send Your Notes !</a></div>
+		  <div><a href="https://drive.google.com/file/d/1c_BiLegpzYBujdF1CaC3HiTsbR1FYGKt/view?usp=drivesdk" target="_blank" class="logo">Academic Calender</a></div>
+      <div><a href="https://docs.google.com/forms/d/e/1FAIpQLSfZLe2--g9HBCb4tQfb11vvVjFpUvHezQeHDmSr1K9wQlPC8Q/viewform?usp=sf_link" target="_blank" class="logo">Feedback</a></div>
+    </nav>
+		
+		<div class="info">
+		<h1>Important Links &#128071;</h1>
+		
+		<h6>
+			<a href="https://lnct.ac.in/osm/" target="_blank" class="logo">LNCT Faculties Notes (For 1st year notes go on 'ENGINEERING SCIENCES HUMANITIES')</a>
+		  </h6>
+		  <h6>
+			<a href="https://www.rgpvnotes.in/btech/grading-system-old/notes/" target="_blank" class="logo">RGPV Notes</a>
+		  </h6>
+		</div>
+	  </div>
+	  <section class="content">
+	  <div class="news blue">
+		<span>Latest News</span><span class="text1" ><marquee>Hello everyone! More notes will be updated soon...stay tuned! </marquee></span>
+		</div>
+	  </section>
+<!--  -->
+<div class="slideshow-container">
+  <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeZMIJgu_kJOuGitePH__03dl3HLUvsCnA4WaMlmR3of3kHjg/formResponse" target="_blank"><div class="slide" style="background-image: url('images/n1.jpg');"></div></a>
+  <a href="" target="_blank"><div class="slide" style="background-image: url('images/n2.jpg');"></div></a>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZLe2--g9HBCb4tQfb11vvVjFpUvHezQeHDmSr1K9wQlPC8Q/viewform?usp=sf_link" target="_blank"><div class="slide" style="background-image: url('images/n3.jpg');"></div></a>
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script src="slide.js"></script>
+<!--  -->
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">YEAR</th>
+								<th class="column2">SEMESTER</th>
+								<th class="column3">SUBJECT</th>
+								<th class="column5">NOTES</th>
+							
+							</tr>
+						</thead>
+						<tbody>
+								<tr>
+									<td class="column1">First</td>
+									<td class="column2">Second</td>
+									<td class="column3">Engineering Physics BT-201</td>
+									<td class="column5"><a class="btn btn-info" href="subjects/physics.html" target="_blank" role="button">Show</a></td>
+								
+								</tr>
+								<tr>
+									<td class="column1">First</td>
+									<td class="column2">Second</td>
+									<td class="column3">Engineering Maths BT-202</td>
+									<td class="column5"><a class="btn btn-info" href="subjects/M2.html" target="_blank" role="button">Show</a></td>
+								
+								</tr>
+								<tr>
+									<td class="column1">First</td>
+									<td class="column2">Second</td>
+									<td class="column3">Basic Mechanical Engineering BT-203</td>
+									<td class="column5"><a class="btn btn-info" href="subjects/BME.html" target="_blank" role="button">Show</a></td>
+								
+								</tr>
+								<tr>
+									<td class="column1">First</td>
+									<td class="column2">Second</td>
+									<td class="column3">Basic Civil Engineering & Mechanics BT-204</td>
+									<td class="column5"><a class="btn btn-info" href="subjects/CE&EM.html" target="_blank" role="button">Show</a></td>
+								
+								</tr>
+								<tr>
+									<td class="column1">First</td>
+									<td class="column2">Second</td>
+									<td class="column3">Basic Computer Engineering BT-205</td>
+									<td class="column5"><a class="btn btn-info" href="subjects/BCE.html" target="_blank" role="button">Show</a></td>
+								
+								</tr>
+								
+							</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+<!--  -->
+
+<div class="teamid">
+  <h4>Team Details</h4>
+</div>
+
+<div class="oline">
+<img src="images/gif.gif" alt="Your GIF Description" class="gif">
+
+<div class="team">
+    <div class="team-member">
+      <div class="name">Lalit Lowanshi</div>
+      <div class="details">
+          <p>Email: lalit@example.com</p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/johndoe" target="_blank">lalit's LinkedIn</a></p>
+          <p>Skills : Python</p>
+      </div>
+  </div>
+
+  <div class="team-member">
+      <div class="name">Harshit Dayma</div>
+      <div class="details">
+          <p>Email: <a href="https://harshit@gmail.com">harshit@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/janesmith" target="_blank">harshit's LinkedIn</a></p>
+          <p>Skills : Java</p>
+      </div>
+  </div>
+
+  <div class="team-member">
+    <div class="name">Gaurav Diwan</div>
+    <div class="details">
+        <p>Email: <a href="https://gauravdiwan10th@gmail.com">gauravdiwan10th@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/janesmith" target="_blank">gaurav's LinkedIn</a></p>
+        <p>Skills : C</p>
+    </div>
+</div>
+</div>
+</div>
+<!--  -->
+      <div class="counter">
+    <div class="counter-container">
+      <div id="visitor-count" class="animated-text">Visitor count: <span id="count">0</span></div>
+    </div>
+    </div>
+<!--  -->
+    <footer>
+      <p>
+          <span class="copyright-symbol">&#169;</span> 2023 Note Nexus. All rights reserved.
+          <p>Designed & Developed by : Team Note Nexus</p>
+      </p>
+  </footer>
+
+
+<!--===============================================================================================-->
+<script src="js/TeamMember.js"></script>
+<!--===============================================================================================-->
+  <script src="js/counter.js"></script>
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.html"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+</body>
+
+</html>
