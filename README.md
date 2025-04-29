@@ -1,8 +1,8 @@
-# Note-Nexus
-Note Nexus is a streamlined note-sharing platform designed to help juniors access high-quality academic notes with ease. It bridges the gap between senior and junior students by enabling efficient distribution of curated study materials, enhancing learning and collaboration within the campus.
+
 # 📚 Note Nexus
 
 **Note Nexus** is a note-sharing platform built to help students easily access and share academic materials. Our goal is to provide juniors with organized, high-quality digital and PDF notes curated by seniors — making learning smoother and more collaborative.
+Note Nexus is a streamlined note-sharing platform designed to help juniors access high-quality academic notes with ease. It bridges the gap between senior and junior students by enabling efficient distribution of curated study materials, enhancing learning and collaboration within the campus.
 
 ---
 
@@ -19,12 +19,13 @@ Note Nexus is a streamlined note-sharing platform designed to help juniors acces
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: HTML, CSS, JavaScript *(or React, if applicable)*
-- **Storage**: Cloudinary / Google Drive / Firebase Storage *(if any)*
+HTML
+CSS
+JavaScript
 
 ---
 
-## 📦 Installation (for developers)
+## 📦 Installation
 
 ```bash
 # Clone the repository
