@@ -20,8 +20,6 @@ Note Nexus is a streamlined note-sharing platform designed to help juniors acces
 ## 🛠️ Tech Stack
 
 - **Frontend**: HTML, CSS, JavaScript *(or React, if applicable)*
-- **Backend**: Node.js, Express *(if used)*
-- **Database**: MongoDB / Firebase *(mention what you used)*
 - **Storage**: Cloudinary / Google Drive / Firebase Storage *(if any)*
 
 ---
